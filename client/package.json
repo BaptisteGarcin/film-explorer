@@ -2,7 +2,7 @@
   "name": "film-explorer-client",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:3001",
+  "proxy": "http://basin.cs.middlebury.edu:5042",
   "dependencies": {
     "prop-types": "^15.6.0",
     "react": "^16.2.0",

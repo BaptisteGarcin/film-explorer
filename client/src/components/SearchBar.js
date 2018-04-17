@@ -5,7 +5,7 @@ function SearchBar(props) {
   const searchField = (
     <input
       type="text"
-      placeholder="Search"
+      placeholder="Searcht"
       value={props.searchTerm}
       onChange={(event) => { props.setTerm(event.target.value); }}
     />

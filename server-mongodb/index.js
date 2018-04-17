@@ -8,7 +8,7 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const mongoDB = require('mongodb');
 
-const mongoURL = process.env.MONGODB_URI || 'mongodb://localhost:5000/film-explorer';
+const mongoURL = process.env.MONGODB_URI || 'mongodb://mongo:27017';
 const { MongoClient, ObjectID } = mongoDB;
 
 // Create Express application
@@ -86,7 +86,7 @@ MongoClient.connect(mongoURL, (err, database) => {
     console.error(err);
   } else {
     // Don't start server unless we have successfully connect to the database
-    db = database.db(url.parse(mongoURL).pathname.slice(1)); // Extract database name
+    //db = database.db(url.parse(mongoURL).pathname.slice(1)); // Extract database name
 
     // We create the server explicitly (instead of using app.listen()) to
     // provide an example of how we would create a https server
