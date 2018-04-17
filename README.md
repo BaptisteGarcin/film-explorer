@@ -66,3 +66,28 @@ The Film Explorer can be deployed to basin (where it is typically run within `sc
 	```
 	NODE_ENV=production PORT=5042 npm run start --prefix server-sqlite
 	```
+
+## Dockerization
+
+Since concurrently creates a race condition I gave a go to trying the docker solution
+and it looks like it's working pretty well!
+
+What I did :
+  ```
+sudo apt get install docker-compose
+  ```
+  
+I created a dockerfile for each nodejs (client & server) and then a docker-compose.yml file that contains the containers we want
+
+When running film-explorer for the first time you will need to build
+  ```
+sudo docker-compose up --build
+  ```
+When you already built once you will only need to 
+```
+sudo docker-compose up
+```
+
+Hot reload is set with nodemon
+ 
+
